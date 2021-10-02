@@ -1,0 +1,34 @@
+
+niveau_t* nouveau_niveau(int nb_colonnes, int nb_lignes);
+void place_sur_terrain (niveau_t* niveau, int colonne, int ligne, char car);
+char lecture_du_terrain (niveau_t* niveau, int colonne, int ligne);
+void initialise_le_terrain (niveau_t* niveau);
+int nombre_de_joueurs(int quel_niveau, tableau_score* tableau);
+void affichage_niveau (niveau_t* niveau);
+niveau_t* lecture_du_niveau(int quel_niveau);
+void liberation_du_niveau (niveau_t* niveau);
+char entree_du_joueur (void);
+int deplacement (niveau_t* niveau,char direction);
+int niveau_termine (niveau_t* niveau);
+int lecture_du_score (int quel_niveau, tableau_score* tableau); 
+void ecriture_du_score(int quel_niveau, int score, char* nom, tableau_score* tableau, int);
+int verifDeplacement(int x, int y, niveau_t* niveau);
+void reset_score (int quel_niveau,int flag);
+char* nom_du_joueur(void);
+int trouver_doublon(int quel_niveau, char* nouveauNom , int nouveauScore, tableau_score* tableau);
+void tri(int quel_niveau, char* nouveauNom, int nouveauScore, tableau_score* tableau);
+int pire_score (int quel_niveau, tableau_score* tableau);
+int OrdreScore(int quel_niveau, char* nouveauNom, int nouveauScore, tableau_score* tableau);
+tableau_score* initialise_tableau_score(void);
+void remplire_tableau_score(int quel_niveau, tableau_score* tableau);
+void MAJ_du_score (int quel_niveau, tableau_score* tableau);
+niveau_t* copie_du_niveau (niveau_t* niveau);
+void liberation_du_tableau_des_score (tableau_score* tableau);
+
+niveau_t* copie_du_niveau (niveau_t* niveau);
+historique_t* initialise_historique_t(int nb_colonnes, int nb_lignes);
+void allonge_tableau_historique (historique_t* hist);
+void racourci_tableau_historique (historique_t* hist);
+void sauvegarde_un_coup (historique_t* hist, niveau_t* niveau);
+void liberation_historique(historique_t* historique);
+niveau_t* coup_precedent (historique_t* hist);
